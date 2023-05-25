@@ -6,7 +6,7 @@ import lombok.Data;
 @Data
 @AllArgsConstructor
 public class Pan {
-    private String id;
+    private int id;
     private int diameter;
     private boolean teflon;
 }

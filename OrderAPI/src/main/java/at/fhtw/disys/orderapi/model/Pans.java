@@ -1,11 +1,10 @@
 package at.fhtw.disys.orderapi.model;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
 public class Pans {
-    private List<Pan> pans = new LinkedList<>();
+    private final List<Pan> pans = new LinkedList<>();
 
     public int getCount() {
         return pans.size();
@@ -16,7 +15,7 @@ public class Pans {
     }
 
     public Pan removePan(Pan pan) {
-        return pans.stream().filter( p -> p.getId().equalsIgnoreCase(pan.getId())).findFirst().orElseThrow();
+        return pans.stream().filter( p -> p.getId()==pan.getId()).findFirst().orElseThrow();
     }
 
     public void addPan(Pan pan) {
